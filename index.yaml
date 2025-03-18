@@ -2,100 +2,19 @@
 # ROS buildfarm index file
 ---
 distributions:
-  humble:
-    ci_builds:
-      benchmark: humble/ci-benchmark.yaml
-      nightly-connext: humble/ci-nightly-connext.yaml
-      nightly-cross-vendor-connext-cyclonedds: humble/ci-nightly-cross-vendor-connext-cyclonedds.yaml
-      nightly-cross-vendor-connext-fastrtps: humble/ci-nightly-cross-vendor-connext-fastrtps.yaml
-      nightly-cross-vendor-connext-fastrtps-dynamic: humble/ci-nightly-cross-vendor-connext-fastrtps-dynamic.yaml
-      nightly-cross-vendor-cyclonedds-fastrtps: humble/ci-nightly-cross-vendor-cyclonedds-fastrtps.yaml
-      nightly-cross-vendor-cyclonedds-fastrtps-dynamic: humble/ci-nightly-cross-vendor-cyclonedds-fastrtps-dynamic.yaml
-      nightly-cross-vendor-fastrtps-fastrtps-dynamic: humble/ci-nightly-cross-vendor-fastrtps-fastrtps-dynamic.yaml
-      nightly-cyclonedds: humble/ci-nightly-cyclonedds.yaml
-      nightly-debug: humble/ci-nightly-debug.yaml
-      nightly-extra-rmw-release: humble/ci-nightly-extra-rmw-release.yaml
-      nightly-fastrtps: humble/ci-nightly-fastrtps.yaml
-      nightly-fastrtps-dynamic: humble/ci-nightly-fastrtps-dynamic.yaml
-      nightly-performance: humble/ci-nightly-performance.yaml
-      nightly-release: humble/ci-nightly-release.yaml
-      overlay: humble/ci-overlay.yaml
-    doc_builds:
-      default: humble/doc-build.yaml
-    notification_emails:
-    - audrow+build.ros2.org@openrobotics.org
-    - ros2-buildfarm-humble@googlegroups.com
-    release_builds:
-      default: humble/release-build.yaml
-      rhel: humble/release-rhel-build.yaml
-      ujv8: humble/release-ubuntu-arm64-build.yaml
-    source_builds:
-      default: humble/source-build.yaml
   jazzy:
-    ci_builds:
-      benchmark: jazzy/ci-benchmark.yaml
-      nightly-connext: jazzy/ci-nightly-connext.yaml
-      nightly-cross-vendor-connext-cyclonedds: jazzy/ci-nightly-cross-vendor-connext-cyclonedds.yaml
-      nightly-cross-vendor-connext-fastrtps: jazzy/ci-nightly-cross-vendor-connext-fastrtps.yaml
-      nightly-cross-vendor-connext-fastrtps-dynamic: jazzy/ci-nightly-cross-vendor-connext-fastrtps-dynamic.yaml
-      nightly-cross-vendor-cyclonedds-fastrtps: jazzy/ci-nightly-cross-vendor-cyclonedds-fastrtps.yaml
-      nightly-cross-vendor-cyclonedds-fastrtps-dynamic: jazzy/ci-nightly-cross-vendor-cyclonedds-fastrtps-dynamic.yaml
-      nightly-cross-vendor-fastrtps-fastrtps-dynamic: jazzy/ci-nightly-cross-vendor-fastrtps-fastrtps-dynamic.yaml
-      nightly-cyclonedds: jazzy/ci-nightly-cyclonedds.yaml
-      nightly-debug: jazzy/ci-nightly-debug.yaml
-      nightly-extra-rmw-release: jazzy/ci-nightly-extra-rmw-release.yaml
-      nightly-fastrtps: jazzy/ci-nightly-fastrtps.yaml
-      nightly-fastrtps-dynamic: jazzy/ci-nightly-fastrtps-dynamic.yaml
-      nightly-performance: jazzy/ci-nightly-performance.yaml
-      nightly-release: jazzy/ci-nightly-release.yaml
-      overlay: jazzy/ci-overlay.yaml
-    doc_builds:
-      default: jazzy/doc-build.yaml
     notification_emails:
-    - marcogg+build.ros2.org@intrinsic.ai
-    - ros2-buildfarm-jazzy@googlegroups.com
+    - zhengjunjie@iscas.ac.cn
     release_builds:
       default: jazzy/release-build.yaml
-      rhel: jazzy/release-rhel-build.yaml
-      unv8: jazzy/release-ubuntu-arm64-build.yaml
     source_builds:
       default: jazzy/source-build.yaml
-  rolling:
-    ci_builds:
-      benchmark: rolling/ci-benchmark.yaml
-      nightly-connext: rolling/ci-nightly-connext.yaml
-      nightly-cross-vendor-connext-cyclonedds: rolling/ci-nightly-cross-vendor-connext-cyclonedds.yaml
-      nightly-cross-vendor-connext-fastrtps: rolling/ci-nightly-cross-vendor-connext-fastrtps.yaml
-      nightly-cross-vendor-connext-fastrtps-dynamic: rolling/ci-nightly-cross-vendor-connext-fastrtps-dynamic.yaml
-      nightly-cross-vendor-cyclonedds-fastrtps: rolling/ci-nightly-cross-vendor-cyclonedds-fastrtps.yaml
-      nightly-cross-vendor-cyclonedds-fastrtps-dynamic: rolling/ci-nightly-cross-vendor-cyclonedds-fastrtps-dynamic.yaml
-      nightly-cross-vendor-fastrtps-fastrtps-dynamic: rolling/ci-nightly-cross-vendor-fastrtps-fastrtps-dynamic.yaml
-      nightly-cyclonedds: rolling/ci-nightly-cyclonedds.yaml
-      nightly-debug: rolling/ci-nightly-debug.yaml
-      nightly-extra-rmw-release: rolling/ci-nightly-extra-rmw-release.yaml
-      nightly-fastrtps: rolling/ci-nightly-fastrtps.yaml
-      nightly-fastrtps-dynamic: rolling/ci-nightly-fastrtps-dynamic.yaml
-      nightly-performance: rolling/ci-nightly-performance.yaml
-      nightly-release: rolling/ci-nightly-release.yaml
-      overlay: rolling/ci-overlay.yaml
-    doc_builds:
-      default: rolling/doc-build.yaml
-    notification_emails:
-    - steven+build.ros2.org@openrobotics.org
-    - ros2-buildfarm-rolling@googlegroups.com
-    release_builds:
-      default: rolling/release-build.yaml
-      rhel: rolling/release-rhel-build.yaml
-      unv8: rolling/release-ubuntu-arm64-build.yaml
-    source_builds:
-      default: rolling/source-build.yaml
-jenkins_url: https://build.ros2.org
+jenkins_url: http://100.99.24.45:10000/
 notification_emails:
-- steven+build.ros2.org@openrobotics.org
+- zhengjunjie@iscas.ac.cn
 prerequisites:
   debian_repositories:
   - http://repo.ros2.org/ubuntu/building
-  - http://repositories.ros.org/ubuntu/main
   debian_repository_keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -165,9 +84,5 @@ status_page_repositories:
   - http://repo.ros2.org/ubuntu/building
   - http://repo.ros2.org/ubuntu/testing
   - http://repo.ros2.org/ubuntu/main
-  rhel:
-  - http://repo.ros2.org/rhel/building
-  - http://repo.ros2.org/rhel/testing
-  - http://repo.ros2.org/rhel/main
 type: buildfarm
 version: 1

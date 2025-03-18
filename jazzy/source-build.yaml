@@ -10,12 +10,11 @@ jenkins_commit_job_priority: 50
 jenkins_job_timeout: 120
 jenkins_pull_request_job_priority: 40
 notifications:
-  committers: true
-  compiler_warnings: true
+  committers: false
+  compiler_warnings: false
   emails:
-  - steven+build.ros2.org@openrobotics.org
-  - ros2-buildfarm-jazzy@googlegroups.com
-  maintainers: true
+  - zhengjunjie@iscas.ac.cn
+  maintainers: false
 repositories:
   keys:
   - |
@@ -54,9 +53,9 @@ repositories:
 repository_blacklist:
 - ros_workspace
 targets:
-  ubuntu:
-    noble:
-      amd64:
+  debian:
+    trixie:
+      riscv64:
 test_commits:
   default: true
 test_pull_requests:
